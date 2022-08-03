@@ -10,3 +10,14 @@ function getComputerChoice () {
 }
 return computerChoice;
 }
+
+function gameRound (playersSelection, computersSelection) {
+    let outcome;
+    if (playersSelection.toLowerCase() === computersSelection.toLowerCase()) {
+        outcome = "Draw"
+    }
+    else if (playersSelection.toLowerCase()==="rock" && computersSelection.toLowerCase() === "paper"){
+        outcome = "Player wins. Rock beats Paper";
+    }
+    return outcome;
+}
