@@ -11,12 +11,12 @@ function getComputerChoice () {
 return computerChoice;
 }
 
-function gameRound (playersSelection, computersSelection) {
+function playRound (playersSelection, computersSelection) {
     let outcome;
     if (playersSelection.toLowerCase() === computersSelection.toLowerCase()) {
         outcome = "Draw"
     }
-    else if (playersSelection.toLowerCase()==="paper" && computersSelection.toLowerCase() === "Rock"){
+    else if (playersSelection.toLowerCase()==="paper" && computersSelection.toLowerCase() === "rock"){
         outcome = "Player wins. Paper beats Rock";
     }
     else if (playersSelection.toLowerCase()==="scissors" && computersSelection.toLowerCase() === "paper"){
@@ -36,3 +36,8 @@ function gameRound (playersSelection, computersSelection) {
     }
     return outcome;
 }
+
+const playerSelection = "paper";
+const computerSelection = getComputerChoice();
+console.log(computerSelection)
+console.log(playRound(playerSelection, computerSelection));
