@@ -36,3 +36,29 @@ function playRound (playersSelection, computersSelection) {
     }
     return outcome;
 }
+
+function game() {
+    let winCountComputer = 0;
+    let winCountPlayer = 0;
+    for (let index = 0; index < 5; index++) {
+    let playersSelection = prompt("Rock, paper, scissors");
+        let computersSelection = getComputerChoice();
+       let roundResult = playRound (playersSelection, computersSelection); 
+        console.log(roundResult);
+        if (roundResult.toLowerCase().includes("computer")){
+            winCountComputer ++;
+        }
+        if (roundResult.toLowerCase().includes("player")){
+            winCountPlayer ++;
+        }
+        console.log(winCountComputer+ " " + winCountPlayer)
+    }
+    if (winCountComputer > winCountPlayer){
+        console.log("The computer wins")
+    } else if (winCountComputer < winCountPlayer){
+        console.log("The player wins")
+    } else {
+        console.log("It's a draw")
+    }
+} 
+game();
