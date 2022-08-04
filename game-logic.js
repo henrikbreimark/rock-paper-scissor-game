@@ -16,8 +16,23 @@ function gameRound (playersSelection, computersSelection) {
     if (playersSelection.toLowerCase() === computersSelection.toLowerCase()) {
         outcome = "Draw"
     }
+    else if (playersSelection.toLowerCase()==="paper" && computersSelection.toLowerCase() === "Rock"){
+        outcome = "Player wins. Paper beats Rock";
+    }
+    else if (playersSelection.toLowerCase()==="scissors" && computersSelection.toLowerCase() === "paper"){
+        outcome = "Player wins. Scissors beats Paper";
+    }
+    else if (playersSelection.toLowerCase()==="rock" && computersSelection.toLowerCase() === "scissors"){
+        outcome = "Player wins. Scissors beats Paper";
+    }
     else if (playersSelection.toLowerCase()==="rock" && computersSelection.toLowerCase() === "paper"){
-        outcome = "Player wins. Rock beats Paper";
+        outcome = "Computer wins. Paper beats Rock";
+    }
+    else if (playersSelection.toLowerCase()==="scissors" && computersSelection.toLowerCase() === "paper"){
+        outcome = "Player wins. Scissors beats Paper";
+    }
+    else if (playersSelection.toLowerCase()==="rock" && computersSelection.toLowerCase() === "scissors"){
+        outcome = "Player wins. Scissors beats Paper";
     }
     return outcome;
 }
