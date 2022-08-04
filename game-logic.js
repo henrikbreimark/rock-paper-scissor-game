@@ -53,12 +53,16 @@ function game() {
         }
         console.log(winCountComputer+ " " + winCountPlayer)
     }
-    if (winCountComputer > winCountPlayer){
-        console.log("The computer wins")
-    } else if (winCountComputer < winCountPlayer){
-        console.log("The player wins")
-    } else {
-        console.log("It's a draw")
-    }
+    console.log(displayWinner(winCountComputer, winCountPlayer))
 } 
+
+function displayWinner (winCountComputer, winCountPlayer){
+    if (winCountComputer > winCountPlayer){
+        return("The computer wins")
+    } else if (winCountComputer < winCountPlayer){
+        return("The player wins")
+    } else {
+        return("It's a draw")
+    }
+}
 game();
