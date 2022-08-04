@@ -1,3 +1,7 @@
+/**
+ * Generates a random choise of rock, paper or scissors
+ * @returns the computers' choice
+ */
 function getComputerChoice () {
     let computerChoice;
     let randomiser = Math.floor(Math.random()*3)+1;
@@ -11,6 +15,12 @@ function getComputerChoice () {
 return computerChoice;
 }
 
+/**
+ * Checks the result from one round of rock paper scissors 
+ * @param {} the players choise
+ * @param {*} the computers choise 
+ * @returns Winner of round
+ */
 function playRound (playersSelection, computersSelection) {
     let outcome;
     if (playersSelection.toLowerCase() === computersSelection.toLowerCase()) {
@@ -37,13 +47,18 @@ function playRound (playersSelection, computersSelection) {
     return outcome;
 }
 
+/**
+ * Runs the game
+ */
+
 function game() {
     let winCountComputer = 0;
     let winCountPlayer = 0;
     for (let index = 0; index < 5; index++) {
     let playersSelection = prompt("Rock, paper, scissors");
         let computersSelection = getComputerChoice();
-       let roundResult = playRound (playersSelection, computersSelection); 
+       let
+        roundResult = playRound (playersSelection, computersSelection); 
         console.log(roundResult);
         if (roundResult.toLowerCase().includes("computer")){
             winCountComputer ++;
@@ -56,6 +71,12 @@ function game() {
     console.log(displayWinner(winCountComputer, winCountPlayer))
 } 
 
+/**
+ * Displays the winner of the game
+ * @param {*} The computers number of wins
+ * @param {*} The players number of wins
+ * @returns The games result
+ */
 function displayWinner (winCountComputer, winCountPlayer){
     if (winCountComputer > winCountPlayer){
         return("The computer wins")
