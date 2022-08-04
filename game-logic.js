@@ -36,8 +36,3 @@ function playRound (playersSelection, computersSelection) {
     }
     return outcome;
 }
-
-const playerSelection = "paper";
-const computerSelection = getComputerChoice();
-console.log(computerSelection)
-console.log(playRound(playerSelection, computerSelection));
