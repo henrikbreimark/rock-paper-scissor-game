@@ -47,10 +47,18 @@ function playRound (playersSelection, computersSelection) {
     return outcome;
 }
 
+
+
+
+
+
+
 /**
  * Runs the game
  */
 
+
+/*
 function game() {
     let winCountComputer = 0;
     let winCountPlayer = 0;
@@ -69,7 +77,7 @@ function game() {
         console.log(winCountComputer+ " " + winCountPlayer)
     }
     console.log(displayWinner(winCountComputer, winCountPlayer))
-} 
+}
 
 /**
  * Displays the winner of the game
@@ -77,6 +85,7 @@ function game() {
  * @param {*} The players number of wins
  * @returns The games result
  */
+/*
 function displayWinner (winCountComputer, winCountPlayer){
     if (winCountComputer > winCountPlayer){
         return("The computer wins")
@@ -86,4 +95,4 @@ function displayWinner (winCountComputer, winCountPlayer){
         return("It's a draw")
     }
 }
-game();
+*/
