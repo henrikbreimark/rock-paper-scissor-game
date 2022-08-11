@@ -3,10 +3,15 @@
 //gets button ID
 const onClick = function(bajs) {
     if (bajs.target.nodeName === 'BUTTON') {
-      console.log(bajs.target.id);
+
+      let test = playRound(bajs.target.id, getComputerChoice());
+      
+      const displayDiv = document.querySelector('#output');
+    displayDiv.innerText = test;
     }
   }
   window.addEventListener('click', onClick);
+
 
 /**
  * Generates a random choise of rock, paper or scissors
