@@ -1,3 +1,7 @@
+const div = document.querySelector('#score');
+var playerScore = 0;
+var computerScore = 0;
+div.innerText = "Player: "+ playerScore + " Computer: " + computerScore; 
 
 
 //gets button ID
@@ -7,9 +11,23 @@ const onClick = function(bajs) {
       let test = playRound(bajs.target.id, getComputerChoice());
       
       const displayDiv = document.querySelector('#output');
-    displayDiv.innerText = test;
+      displayDiv.innerText = test;
+
+      if (test.toLowerCase().includes("computer")){ 
+        computerScore++;   }
+        if (test.toLowerCase().includes("player")){
+        playerScore ++;
+        }
+        div.innerText = "Player: "+ playerScore + " Computer: " + computerScore; 
+        
+        if (playerScore ===3 ){displayDiv.innerText= "Player wins"};
+        if (computerScore ===3 ){displayDiv.innerText= "Computer wins"};
+
     }
-  }
+
+}
+    
+
   window.addEventListener('click', onClick);
 
 
